@@ -1,22 +1,11 @@
 #include <iostream>
-#include <fstream>
-#include <string>
+#include "Game.h"
 
 using namespace std;
 
 int main() {
-
-	string line;
-	ifstream myfile("test.level");
-	if(myfile.is_open()) {
-		while(getline(myfile, line)) {
-			//cout << line << endl;
-			cout << line << "\n";
-		}
-		myfile.close();
-	} else {
-		cout << "Cannot open file.";
-	}
+	Game game;
+	game.run();
 
 	system("PAUSE");
 	return 0;
